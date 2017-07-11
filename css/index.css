@@ -1,0 +1,23 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.div_title {
+	height: 54px;
+	background-color: darkblue;
+	line-height: 54px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.div_btn{
+	text-align: center;
+	height: 36px;
+	margin:16px;
+	line-height: 36px;
+	color: darkblue;
+	border-radius: 3px;
+	border:solid darkblue 1px;
+}

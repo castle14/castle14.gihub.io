@@ -1,0 +1,25 @@
+.div_setting_item{
+	margin-top: 16px;
+	margin-bottom: 16px;
+	height: 48px;
+	line-height: 48px;
+	text-align: left;
+	background-color: white;
+	color: black;
+	font-size: 18px;
+	box-sizing: border-box;
+	padding-left:16px;
+}
+.img_setting_item{
+	float: left;
+	margin-top: 12px;
+	margin-right: 16px;
+}
+.img_setting_item_right{
+	float: right;
+	margin-top: 12px;
+	margin-right: 16px;
+}
+.div_setting_item_click{
+	background-color: gainsboro;
+}
