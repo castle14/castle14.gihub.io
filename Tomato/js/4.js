@@ -14,4 +14,8 @@ $(document).ready(function() {
 	$(".div_setting_item").on("touchend",function(){
 		$(this).removeClass("div_setting_item_click");
 	});
+	
+	$("#div_edit_collection").on("click",function(){
+		location.href="login.html";
+	});
 });
