@@ -2,7 +2,10 @@
 	margin: 0px;
 	padding: 0px;
 }
-
+/* 
+ * icon base color:#ea986c
+ * 
+ */
 .div_title_bar {
 	height: 54px;
 	background-color: brown;
@@ -129,9 +132,9 @@
 .hr_list{
 	margin-bottom: 1px;
 }
-#img_logo {
+.img_title_left_icon {
 	float: left;
-	margin-top: 12px;
+	margin-top: 15px;
 	margin-left: 16px;
 }
 .div_title_right_btn{

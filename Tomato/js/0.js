@@ -108,4 +108,7 @@ $(document).ready(function() {
 	$(".div_line_btn").on("touchend",function(){
 		$(this).removeClass("div_line_btn_click");
 	});
+	$("#img_back").on("click",function(){
+		window.history.back();
+	});
 });
