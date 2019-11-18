@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="../jslib/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="../jslib/bmob-2.2.1.min.js"></script>
+		<title>会议室管理</title>
+	</head>
+	<body>
+		<label for="meeting_date">查询日期：</label><input id="meeting_date" type="date"/>
+		<table border="1" id="meeting_room_table" cellspacing="0" cellpadding="3">
+			<tr><th>会议室ID</th><th>会议室名称</th><th>会议室状态</th><th>操作</th></tr>
+		</table>
+		<script type="text/javascript">
+			//Bmob.initialize("081365fff35cb453", "123456");
+			Bmob.initialize("081365fff35cb453", "123456");
+			function createMeetingRoomTable(data,datetime){
+				// console.log(data);
+				for(i in data){
+					var newRow = "<tr><td>"+data[i].objectId+"</td><td>"+data[i].roomname+"</td>"
+					+"<td></td>"
+					+"<td>"+"<a href='#'>预定</a>"+" "+"<a href='#'>查看</a>"+"</td></tr>";
+					$(newRow).insertAfter($("#meeting_room_table tr:eq(0)"));
+				}
+			}
+			const query = Bmob.Query("meetingroom");
+			query.find().then(res => {
+			    createMeetingRoomTable(res);
+			});
+		</script>
+	</body>
+</html>
