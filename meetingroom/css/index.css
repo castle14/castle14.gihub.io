@@ -1,0 +1,85 @@
+.index_header {
+	margin: * 0;
+	width: 100%;
+	height: 40px;
+	background-color: #003366;
+	line-height: 40px;
+	text-align: center;
+}
+
+.index_header_span {
+	font-weight: bold;
+	font-size: larger;
+	color: #ffffff;
+	letter-spacing: 4px;
+}
+
+.date_div {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.meeting_table {
+	width: 100%;
+}
+
+.meeting_table tr {
+	height: 30px;
+}
+
+.meeting_table td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.mt_room_card {
+/* 	margin-top: 10px; */
+	width: 100%;
+	height: 120px;
+	border: #FFFFFF solid 5px;
+	background-color: #3399CC;
+}
+
+.mt_room_left {
+	float: left;
+	width: 80%;
+	height: 120px;
+	border-right: #FFFFFF solid 1px;
+}
+
+.mt_room_top {
+	width: 100%;
+	height: 40px;
+	border-bottom: #FFFFFF solid 1px;
+	line-height: 40px;
+	text-align: left;
+	font-weight: bold;
+	color: #ffffff;
+	letter-spacing: 4px;
+	padding-left: 10px;
+}
+
+.mt_room_bottom {
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top:5px ;
+	padding-bottom:5px ;
+}
+.mt_room_bottom p{
+	line-height: 15px;
+	color: #ffffff;
+}
+.mt_room_right{
+	float: right;
+	background-color: #99CCCC;
+	height: 110px;
+	width: 20%;
+	text-align: center;
+	line-height: 55px;
+	color: #ffffff;
+	
+}

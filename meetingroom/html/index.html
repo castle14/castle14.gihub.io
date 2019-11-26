@@ -4,37 +4,76 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" href="../css/mobile_base.css" />
+		<link rel="stylesheet" href="../css/index.css" />
 		<script type="text/javascript" src="../jslib/jquery-3.1.1.js"></script>
 		<script type="text/javascript" src="../jslib/bmob-2.2.1.min.js"></script>
 		<script type="text/javascript" src="../js/bmobUtil.js"></script>
+		<script type="text/javascript" src="../js/index.js"></script>
 		<title>会议室管理</title>
 	</head>
 	<body>
-		<div>
+		<header class="index_header">
+			<span class="index_header_span">会议室管理</span>
+		</header>
+		<div class="date_div">
 		<label for="meeting_date">查询日期：</label><input id="meeting_date" type="date"/>
 		</div>
-		<table border="1" id="meeting_room_table" cellspacing="0" cellpadding="3">
+<!-- 		<table border="1" id="meeting_room_table" cellspacing="0" cellpadding="3" class="meeting_table">
 			<tr><th>序号</th><th>会议室名称</th><th>预定状态</th><th>操作</th></tr>
-		</table>
-		<script type="text/javascript">
-			function checkMeetingRoom(meeting_id){
-				alert(meeting_id);
-			}
-			function createMeetingRoomTable(data,datetime){
-				// console.log(data);
-				for(i in data){
-					var newRow = "<tr><td>"+(Number(i)+1)+"</td>"+
-					"<td>"+data[i].roomname+"</td>"
-					+"<td>□□□□ ■■■■</td>"
-					+"<td>"+"<a href='#' onclick=checkMeetingRoom('"+ data[i].objectId +"') >查看</a></td></tr>";
-					$(newRow).insertAfter($("#meeting_room_table tr:eq("+i+")"));
-				}
-			}
-			$("#meeting_date").val(getDate());
-			const query = Bmob.Query("meetingroom")
-			query.find().then(res => {
-			    createMeetingRoomTable(res);
-			});
-		</script>
+		</table> -->
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
+		<div class="mt_room_card">
+			<div class="mt_room_left">
+				<div class="mt_room_top">会议室一（20人）</div>
+				<div class="mt_room_bottom">
+					<p>空闲</p>
+				</div>
+			</div>
+			<div class="mt_room_right">预<br>定</div>
+		</div>
 	</body>
 </html>
