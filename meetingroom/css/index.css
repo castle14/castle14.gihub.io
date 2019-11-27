@@ -14,27 +14,10 @@
 	letter-spacing: 4px;
 }
 
-.date_div {
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-}
 
-.meeting_table {
-	width: 100%;
-}
-
-.meeting_table tr {
-	height: 30px;
-}
-
-.meeting_table td {
-	text-align: center;
-	vertical-align: middle;
-}
 
 .mt_room_card {
-/* 	margin-top: 10px; */
+	/* display: none; */
 	width: 100%;
 	height: 120px;
 	border: #FFFFFF solid 5px;
@@ -66,14 +49,16 @@
 	line-height: 70px;
 	text-align: left;
 	padding-left: 10px;
-	padding-top:5px ;
-	padding-bottom:5px ;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
-.mt_room_bottom p{
+
+.mt_room_bottom p {
 	line-height: 15px;
 	color: #ffffff;
 }
-.mt_room_right{
+
+.mt_room_right {
 	float: right;
 	background-color: #99CCCC;
 	height: 110px;
@@ -81,5 +66,40 @@
 	text-align: center;
 	line-height: 55px;
 	color: #ffffff;
+
+}
+
+.date_div {
+	width: 100%;
+	height: 40px;
+	border-bottom: #99CCCC solid 1px; 
+}
+
+.date_display {
+	float: left;
+	width: calc(100% - 256px);
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #99CCCC;
+	/* border-right: #808080 solid 1px; */
 	
+}
+.weekday_div {
+	width: 32px;
+	height: 32px;
+	float: left;
+	line-height: 32px;
+	text-align: center;
+	margin-left: 4px;
+	margin-top: 4px;
+	margin-bottom: 2px;
+	border: #99CCCC solid 1px;
+}
+.weekday_div_weekend {
+	border: indianred solid 1px;
+}
+.weekday_div_checked {
+	background-color: #99CCCC;
+	border: #99CCCC solid 1px;
 }
