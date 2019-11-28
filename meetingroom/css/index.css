@@ -72,7 +72,7 @@
 .date_div {
 	width: 100%;
 	height: 40px;
-	border-bottom: #99CCCC solid 1px; 
+	border-bottom: #99CCCC solid 1px;
 }
 
 .date_display {
@@ -83,8 +83,9 @@
 	text-align: center;
 	background-color: #99CCCC;
 	/* border-right: #808080 solid 1px; */
-	
+
 }
+
 .weekday_div {
 	width: 32px;
 	height: 32px;
@@ -96,9 +97,11 @@
 	margin-bottom: 2px;
 	border: #99CCCC solid 1px;
 }
+
 .weekday_div_weekend {
 	border: indianred solid 1px;
 }
+
 .weekday_div_checked {
 	background-color: #99CCCC;
 	border: #99CCCC solid 1px;
