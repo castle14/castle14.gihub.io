@@ -31,7 +31,37 @@ function getMtRoomList(fn){
 }
 /*
  根据会议室id和日期获取当前会议室预定情况,并进行处理
+ equalTo 方法支持 "==","!=",">",">=","<","<="
 */
 function getMtRoomCondition(roomid,date,fn){
+	let query = Bmob.Query("order_log");
+	query.equalTo("room_id","==", roomid);
+	query.equalTo("order_date","==", date);
+	query.find().then(res => {
+	  fn(res);
+	}).catch(err => {
+	  console.log(err);
+	  alert("获取会议室"+roomid+"预定情况失败!");
+	})
+}
+/*
+ 添加会议室预定
+*/
+function orderMtRoom(orderinfo){
+	let query = Bmob.Query('order_log');
 	
+	query.set("room_id",orderinfo.room_id);
+	query.set("subscriber_tel",orderinfo.subscriber_tel);
+	query.set("subscriber",orderinfo.subscriber);
+	query.set("roomname",orderinfo.roomname);
+	query.set("meeting_desc",orderinfo.meeting_desc);
+	query.set("order_date",orderinfo.order_date);
+	query.set("start_time",orderinfo.start_time);
+	query.set("end_time",orderinfo.end_time);
+	
+	query.save().then(res => {
+	  console.log(res);
+	}).catch(err => {
+	  console.log(err);
+	})
 }
