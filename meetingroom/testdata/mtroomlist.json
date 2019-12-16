@@ -1,0 +1,21 @@
+{
+	"results": [{
+		"createdAt": "2019-11-18 22:03:08",
+		"max_capacity": "20",
+		"objectId": "HrS04449",
+		"roomname": "会议室一",
+		"updatedAt": "2019-11-28 15:38:47"
+	}, {
+		"createdAt": "2019-11-18 22:03:20",
+		"max_capacity": "15",
+		"objectId": "eDfR2226",
+		"roomname": "会议室二",
+		"updatedAt": "2019-11-28 15:38:44"
+	}, {
+		"createdAt": "2019-11-18 22:03:29",
+		"max_capacity": "10",
+		"objectId": "NZ7JIIIL",
+		"roomname": "会议室三",
+		"updatedAt": "2019-11-28 15:38:38"
+	}]
+}

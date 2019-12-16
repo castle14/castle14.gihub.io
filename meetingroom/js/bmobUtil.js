@@ -42,7 +42,7 @@ function getMtRoomCondition(roomid,date,fn){
 	}).catch(err => {
 	  console.log(err);
 	  alert("获取会议室"+roomid+"预定情况失败!");
-	})
+	});
 }
 /*
  添加会议室预定
@@ -63,5 +63,5 @@ function orderMtRoom(orderinfo){
 	  console.log(res);
 	}).catch(err => {
 	  console.log(err);
-	})
+	});
 }
