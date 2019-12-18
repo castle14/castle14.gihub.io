@@ -3,23 +3,34 @@ function refreshRoomList(date) {
 	getMtRoomList(function(data) {
 		// console.log(data);
 		for (i in data) {
-			let mtroom_state = '';
-			getMtRoomCondition(data[i].objectId, date, function(roonstatedata) {
-				console.log(roonstatedata);
-				if(roonstatedata[0]!=null && roonstatedata[0]!=undefined){
-					mtroom_state = mtroom_state + roonstatedata[0].start_time + "-";
-					mtroom_state = mtroom_state + roonstatedata[0].end_time + " ";
-					mtroom_state = mtroom_state + roonstatedata[0].subscriber + " ";
-					mtroom_state = mtroom_state + roonstatedata[0].subscriber_tel;
-				}
-				console.log(mtroom_state);
-			});
 			let div_str = '<div class="mt_room_card"><div class="mt_room_left"><div class="mt_room_top">' +
 				data[i].roomname +
-				'</div><div class="mt_room_bottom"><p>' + mtroom_state + '</p></div></div>' +
-				'<div class="mt_room_right" roonid="' + data[i].objectId + '">预<br>定</div>' +
+				'</div><div class="mt_room_bottom" id="rmstate_' + data[i].objectId + '">' + '' + '</div></div>' +
+				'<div class="mt_room_right" id="' + data[i].objectId + '">预<br>定</div>' +
 				'</div>';
 			$(div_str).appendTo('#roomlist');
+
+			getMtRoomCondition(data[i].objectId, date, function(roonstatedata) {
+				// console.log(roonstatedata);
+				for (j=0;j<roonstatedata.length;j++) {
+					if (roonstatedata[j] != null && roonstatedata[j] != undefined) {
+						let mtroom_state = '●';
+						mtroom_state = mtroom_state + roonstatedata[j].start_time + "-";
+						mtroom_state = mtroom_state + roonstatedata[j].end_time + " ";
+						mtroom_state = mtroom_state + roonstatedata[j].subscriber + " ";
+						mtroom_state = mtroom_state + roonstatedata[j].subscriber_tel;
+						let tmp = "<p>" + mtroom_state + "</p>" + $("#rmstate_" + roonstatedata.roomid).html();
+						$("#rmstate_" + roonstatedata.roomid).html(tmp);
+					}
+				}
+				if(roonstatedata.length == 0){
+					$("#rmstate_" + roonstatedata.roomid).html("<p>空闲</p>");
+				}
+			});
+
+			$("#" + data[i].objectId).on("click", function() {
+				console.log("click-" + $(this).attr("id"));
+			});
 		}
 	});
 }
@@ -39,6 +50,7 @@ $(function() {
 			$(".weekday_div").removeClass("weekday_div_checked");
 			$(this).addClass("weekday_div_checked");
 			console.log("click " + $(this).attr("date"));
+			refreshRoomList($(this).attr("date"));
 		});
 	}
 	refreshRoomList(getDate());
